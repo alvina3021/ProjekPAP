@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduQuest - Platform Pembelajaran Gamifikasi</title>
+</head>
+<body>
+    <header>
+        <div>
+            <div>
+                <h1>G-Learn</h1>
+                <p>Platform Pembelajaran Gamifikasi</p>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="#">Kelas</a></li>
+                    <li><a href="#">Tantangan</a></li>
+                    <li><a href="#">Leaderboard</a></li>
+                </ul>
+            </nav>
+            
+            <div>
+                <div>A</div>
+                <div>
+                    <div>Nama Pengguna (Level 5)</div>
+                    <div>350/500 XP</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div>
+            <h3>Mendukung SDGs:</h3>
+            <p>SDG 4: Pendidikan Berkualitas & SDG 9: Industri, Inovasi dan Infrastruktur</p>
+        </div>
+        
+        <div>
+            <button onclick="switchView('student')">Tampilan Siswa</button>
+            <button onclick="switchView('teacher')">Tampilan Guru</button>
+        </div>
+        
+        <!-- VIEW SISWA -->
+        <div id="student-view">
+            <div>
+                <div>5</div>
+                <div>
+                    <div>Level 5: Penjelajah Pengetahuan</div>
+                    <div>
+                        <div>XP Progress: 350/500 XP</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h2>Tantangan Harian</h2>
+                <div>
+                    <div>
+                        <div>+50 XP</div>
+                        <h3>Kuis Matematika</h3>
+                        <p>Selesaikan 5 soal matematika untuk mendapatkan XP tambahan!</p>
+                        <div>Berakhir dalam: 8 jam</div>
+                        <button>Mulai Tantangan</button>
+                    </div>
+                    <div>
+                        <div>+30 XP</div>
+                        <h3>Diskusi Sains</h3>
+                        <p>Berpartisipasi dalam forum diskusi tentang penemuan sains terbaru</p>
+                        <div>Berakhir dalam: 10 jam</div>
+                        <button>Mulai Tantangan</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h2>Leaderboard Kelas</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Peringkat</th>
+                            <th>Nama</th>
+                            <th>Level</th>
+                            <th>XP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Budi Setiawan</td>
+                            <td>7</td>
+                            <td>820 XP</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Siti Nurhaliza</td>
+                            <td>6</td>
+                            <td>780 XP</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Agus Firmansyah</td>
+                            <td>6</td>
+                            <td>720 XP</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Anda</td>
+                            <td>5</td>
+                            <td>350 XP</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Dewi Lestari</td>
+                            <td>4</td>
+                            <td>290 XP</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div>
+                <h2>Kuis Kolaboratif Aktif</h2>
+                <div>
+                    <div>
+                        <div>Fisika</div>
+                        <div>
+                            <div>Hukum Newton</div>
+                            <div>
+                                <span>5 anggota tim</span>
+                                <span>+100 XP</span>
+                            </div>
+                            <button>Gabung Kuis</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div>Biologi</div>
+                        <div>
+                            <div>Sistem Pernapasan</div>
+                            <div>
+                                <span>3 anggota tim</span>
+                                <span>+80 XP</span>
+                            </div>
+                            <button>Gabung Kuis</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div>Sejarah</div>
+                        <div>
+                            <div>Perang Dunia II</div>
+                            <div>
+                                <span>4 anggota tim</span>
+                                <span>+90 XP</span>
+                            </div>
+                            <button>Gabung Kuis</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h2>Lencana Saya</h2>
+                <div>
+                    <div>
+                        <div>🏆</div>
+                        <div>Master Matematika</div>
+                    </div>
+                    <div>
+                        <div>🔬</div>
+                        <div>Ilmuwan Muda</div>
+                    </div>
+                    <div>
+                        <div>📚</div>
+                        <div>Kutu Buku</div>
+                    </div>
+                    <div>
+                        <div>🌍</div>
+                        <div>Warga Global</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h2>Tugas Aktif</h2>
+                <div>
+                    <div>
+                        <div>[Pending]</div>
+                        <div>
+                            <div>Esai Sejarah Indonesia</div>
+                            <div>Tenggat: 2 hari lagi</div>
+                        </div>
+                        <div>+70 XP</div>
+                    </div>
+                    <div>
+                        <div>[Pending]</div>
+                        <div>
+                            <div>Proyek Sains: Energi Terbarukan</div>
+                            <div>Tenggat: 5 hari lagi</div>
+                        </div>
+                        <div>+120 XP</div>
+                    </div>
+                    <div>
+                        <div>[Selesai]</div>
+                        <div>
+                            <div>Latihan Matematika</div>
+                            <div>Selesai</div>
+                        </div>
+                        <div>+50 XP</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- VIEW GURU -->
+        <div id="teacher-view" style="display:none;">
+            <div>
+                <div>
+                    <h3>Total Siswa</h3>
+                    <p>35</p>
+                </div>
+                <div>
+                    <h3>Rata-rata Level</h3>
+                    <p>4.8</p>
+                </div>
+                <div>
+                    <h3>Tingkat Keterlibatan</h3>
+                    <p>87%</p>
+                </div>
+            </div>
+            
+            <div>
+                <h2>Kelola Tantangan Harian</h2>
+                <div>
+                    <div>
+                        <div>+50 XP</div>
+                        <h3>Kuis Matematika</h3>
+                        <p>Selesaikan 5 soal matematika untuk mendapatkan XP tambahan!</p>
+                        <div>Berakhir dalam: 8 jam</div>
+                        <div>
+                            <p>Progress: 65%</p>
+                        </div>
+                        <p>Partisipasi: 23/35 siswa</p>
+                        <button>Edit Tantangan</button>
+                    </div>
+                    <div>
+                        <div>+30 XP</div>
+                        <h3>Diskusi Sains</h3>
+                        <p>Berpartisipasi dalam forum diskusi tentang penemuan sains terbaru</p>
+                        <div>Berakhir dalam: 10 jam</div>
+                        <div>
+                            <p>Progress: 40%</p>
+                        </div>
+                        <p>Partisipasi: 14/35 siswa</p>
+                        <button>Edit Tantangan</button>
+                    </div>
+                </div>
+                <button>Tambah Tantangan Baru</button>
+            </div>
+            
+            <div>
+                <h2>Kelola Kuis Kolaboratif</h2>
+                <div>
+                    <div>
+                        <div>Fisika</div>
+                        <div>
+                            <div>Hukum Newton</div>
+                            <div>
+                                <span>5 tim terbentuk</span>
+                                <span>+100 XP</span>
+                            </div>
+                            <button>Lihat Hasil</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div>Biologi</div>
+                        <div>
+                            <div>Sistem Pernapasan</div>
+                            <div>
+                                <span>3 tim terbentuk</span>
+                                <span>+80 XP</span>
+                            </div>
+                            <button>Lihat Hasil</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div>Sejarah</div>
+                        <div>
+                            <div>Perang Dunia II</div>
+                            <div>
+                                <span>4 tim terbentuk</span>
+                                <span>+90 XP</span>
+                            </div>
+                            <button>Lihat Hasil</button>
+                        </div>
+                    </div>
+                </div>
+                <button>Buat Kuis Baru</button>
+            </div>
+            
+            <div>
+                <h2>Statistik Siswa</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Level</th>
+                            <th>XP</th>
+                            <th>Tantangan Selesai</th>
+                            <th>Kuis Selesai</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Budi Setiawan</td>
+                            <td>7</td>
+                            <td>820 XP</td>
+                            <td>15</td>
+                            <td>12</td>
+                            <td><button>Detail</button></td>
+                        </tr>
+                        <tr>
+                            <td>Siti Nurhaliza</td>
+                            <td>6</td>
+                            <td>780 XP</td>
+                            <td>14</td>
+                            <td>10</td>
+                            <td><button>Detail</button></td>
+                        </tr>
+                        <tr>
+                            <td>Agus Firmansyah</td>
+                            <td>6</td>
+                            <td>720 XP</td>
+                            <td>13</td>
+                            <td>11</td>
+                            <td><button>Detail</button></td>
+                        </tr>
+                        <tr>
+                            <td>Ahmad Susanto</td>
+                            <td>5</td>
+                            <td>350 XP</td>
+                            <td>8</td>
+                            <td>5</td>
+                            <td><button>Detail</button></td>
+                        </tr>
+                        <tr>
+                            <td>Dewi Lestari</td>
+                            <td>4</td>
+                            <td>290 XP</td>
+                            <td>7</td>
+                            <td>6</td>
+                            <td><button>Detail</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>EduQuest &copy; 2025 - Platform Pembelajaran Gamifikasi</p>
+        <div>
+            <p>Mendukung SDGs:</p>
+            <p>SDG 4: Pendidikan Berkualitas & SDG 9: Industri, Inovasi dan Infrastruktur</p>
+        </div>
+    </footer>
+
+    <script>
+        function switchView(view) {
+            if (view === 'student') {
+                document.getElementById('student-view').style.display = 'block';
+                document.getElementById('teacher-view').style.display = 'none';
+            } else {
+                document.getElementById('student-view').style.display = 'none';
+                document.getElementById('teacher-view').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
