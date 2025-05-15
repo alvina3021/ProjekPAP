@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - SumbangYuk</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #ffffff;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #ffffff;
+            padding: 16px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-text {
+            font-size: 18px;
+            font-weight: 600;
+            font-weight: bold;
+            color: #333;
+            margin-left: 8px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+        
+        .nav-menu li {
+            margin-left: 15px;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+            font-weight: 400;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-family:poppins;
+        }
+
+        .nav-menu a.login-register {
+            background-color: #123458;
+            border-radius: 20px;
+            padding: 6px 14px;
+            color: white;
+            font-family: poppins;
+        }
+        .main-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #000;
+            margin-bottom: 30px;
+        }
+
+        .social-login {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 14px;
+            cursor: pointer;
+            width: 490px;
+            height:39px;
+            font-weight: 450;
+            font-size: 13px;
+        }
+
+        .social-btn img {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+        }
+
+        .separator {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 20px 0;
+            color: #777;
+            font-size: 14px;
+            font-family:poppins;
+        }
+
+        .separator::before,
+        .separator::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .separator::before {
+            margin-right: 15px;
+        }
+
+        .separator::after {
+            margin-left: 15px;
+        }
+
+        .signup-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            font-family:poppins;
+        }
+
+        .form-input {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 14px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .submit-btn {
+            background-color: #123458;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-top: 10px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <svg width="30" height="30" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="18" cy="18" r="18" fill="#004D8A"/>
+                    <path d="M10 22.5h2.5v-7.5H10v7.5zm0-10h2.5v-2.5H10v2.5zm3.75 10h2.5v-7.5h-2.5v7.5zm0-10h2.5v-2.5h-2.5v2.5zm3.75 10h7.5v-2.5h-7.5v2.5zm0-5h7.5v-2.5h-7.5v2.5zm0-5h7.5v-2.5h-7.5v2.5zm8.75 10h2.5v-2.5h-2.5v2.5zm0-5h2.5v-2.5h-2.5v2.5zm0-5h2.5v-2.5h-2.5v2.5z" fill="white"/>
+                </svg>
+                <span class="logo-text">SumbangYuk</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Donasikan Barang</a></li>
+                <li><a href="#">Riwayat Donasi</a></li>
+                <li><a href="#SignUp.html" class="login-register">Masuk/Daftar</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <div class="main-container">
+        <h1>Hai, Sobat Sumbang!</h1>
+        
+        <div class="social-login">
+            <button class="social-btn">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.1711 8.36788H17.4998V8.33329H9.99984V11.6666H14.7094C14.0223 13.6063 12.1761 15 9.99984 15C7.23859 15 4.99984 12.7612 4.99984 10C4.99984 7.23871 7.23859 5 9.99984 5C11.2744 5 12.4344 5.48079 13.3169 6.26625L15.6744 3.90875C14.1886 2.52079 12.1928 1.66663 9.99984 1.66663C5.39775 1.66663 1.6665 5.39788 1.6665 10C1.6665 14.6021 5.39775 18.3333 9.99984 18.3333C14.6019 18.3333 18.3332 14.6021 18.3332 10C18.3332 9.44121 18.2757 8.89583 18.1711 8.36788Z" fill="#FFC107"/>
+                    <path d="M2.62744 6.12121L5.36536 8.12913C6.10619 6.29496 7.90036 5 9.99994 5C11.2745 5 12.4345 5.48079 13.317 6.26625L15.6745 3.90875C14.1887 2.52079 12.1929 1.66663 9.99994 1.66663C6.74161 1.66663 3.91077 3.47371 2.62744 6.12121Z" fill="#FF3D00"/>
+                    <path d="M10 18.3334C12.1525 18.3334 14.1175 17.5096 15.5975 16.1709L13.0092 13.9834C12.1452 14.6409 11.0742 15.0001 10 15.0001C7.83583 15.0001 5.99667 13.6176 5.3025 11.6892L2.58667 13.7851C3.85833 16.4826 6.71583 18.3334 10 18.3334Z" fill="#4CAF50"/>
+                    <path d="M18.1711 8.36796H17.5V8.33337H10V11.6667H14.7096C14.3809 12.5902 13.7889 13.3972 13.0079 13.9839L13.0096 13.9826L15.5979 16.1701C15.4046 16.3434 18.3333 14.1667 18.3333 10.0001C18.3333 9.44129 18.2758 8.89591 18.1711 8.36796Z" fill="#1976D2"/>
+                </svg>
+                Sign up with Google
+            </button>
+            <button class="social-btn">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 10C20 4.47715 15.5229 0 10 0C4.47715 0 0 4.47715 0 10C0 14.9912 3.65684 19.1283 8.4375 19.8785V12.8906H5.89844V10H8.4375V7.79688C8.4375 5.29063 9.93047 3.90625 12.2146 3.90625C13.3084 3.90625 14.4531 4.10156 14.4531 4.10156V6.5625H13.1922C11.95 6.5625 11.5625 7.3334 11.5625 8.125V10H14.3359L13.8926 12.8906H11.5625V19.8785C16.3432 19.1283 20 14.9912 20 10Z" fill="#1877F2"/>
+                    <path d="M13.8926 12.8906L14.3359 10H11.5625V8.125C11.5625 7.33418 11.95 6.5625 13.1922 6.5625H14.4531V4.10156C14.4531 4.10156 13.3084 3.90625 12.2146 3.90625C9.93047 3.90625 8.4375 5.29063 8.4375 7.79688V10H5.89844V12.8906H8.4375V19.8785C9.45508 20.0405 10.5449 20.0405 11.5625 19.8785V12.8906H13.8926Z" fill="white"/>
+                </svg>
+                Sign up with Facebook
+            </button>
+        </div>
+        
+        <div class="separator">- Atau -</div>
+        
+        <form class="signup-form">
+            <input type="text" class="form-input" placeholder="Nama Lengkap" required>
+            <input type="email" class="form-input" placeholder="Email" required>
+            <input type="password" class="form-input" placeholder="Kata Sandi" required>
+            <button type="submit" class="submit-btn">Buat Akun</button>
+        </form>
+    </div>
+</body>
+</html>
