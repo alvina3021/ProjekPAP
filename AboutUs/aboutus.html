@@ -1,0 +1,223 @@
+<script>
+// ...existing code...
+    // Navigasi Header
+    document.querySelectorAll(".nav-menu a").forEach(function(link) {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+            const text = this.textContent.trim();
+
+            switch (text) {
+                case "Donasi":
+                    window.location.href = "../Kategori donasi/kategoridonasi.html";
+                    break;
+                case "Riwayat":
+                    window.location.href = "../Riwayat Donasi/riwayatdonasi.html";
+                    break;
+                case "Tentang":
+                    window.location.href = "aboutus.html";
+                    break;
+                case "Aktivitas":
+                    window.location.href = "aktivitas.html";
+                    break;
+                case "Mulai Berbagi":
+                    window.location.href = "login.html";
+                    break;
+            }
+        });
+    });
+// ...existing code...
+</script>
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SumbangYuk - Platform Donasi</title>
+    <link rel="stylesheet" href="aboutUs.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header dan Navigasi -->
+       <header>
+        <div class="container header-container">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 4H3C1.89543 4 1 4.89543 1 6V18C1 19.1046 1.89543 20 3 20H21C22.1046 20 23 19.1046 23 18V6C23 4.89543 22.1046 4 21 4Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="logo-text">SumbangYuk</span>
+            </div>
+          <ul class="nav-menu">
+    <li><a href="../Kategori donasi/kategoridonasi.html">Donasi</a></li>
+    <li><a href="../Riwayat Donasi/riwayatdonasi.html">Riwayat</a></li>
+    <li><a href="aboutus.html">Tentang</a></li>
+    <li><a href="aktivitas.html">Aktivitas</a></li>
+    <li><a href="login.html" class="login-register">Mulai Berbagi</a></li>
+</ul>
+        </div>
+    </header>
+
+<!-- Perjalanan Section -->
+<section class="timeline-section">
+    <h2 class="section-title">Perjalanan Kami</h2>
+    <p class="timeline-intro">
+        Kami percaya bahwa sedikit bantuan bisa kara untuk membuat perubahan berarti. Perjalanan ini dimulai dari kesadaran: 
+        melihat kesenjangan besar yang perlu ditangani bersama, untuk membantu sesama. Seiring berjalannya waktu kami terus maju untuk peduli.
+    </p>
+
+    <div class="timeline">
+        <div class="timeline-item">
+        <div class="timeline-year">2020</div>
+            <div class="timeline-content">
+                <img src="2020.jpg" alt="SumbangYuk 2020" class="timeline-img">
+                <div class="timeline-text">
+                    <h3>Awal Masa Kerelawanan</h3>
+                    <p>Tim kami memulai sebagai proyek kecil yang ingin membantu komunitas lokal. Fokus SumbangYuk pada saat itu adalah dukungan terhadap keluarga kurang mampu. Dengan semangat kecil tapi tekad yang mengebu-ngebu, kami memulai perjalanan panjang untuk mendukung mereka yang membutuhkan.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+        <div class="timeline-year">2024</div>
+            <div class="timeline-content right">
+                <img src="2024.jpg" alt="SumbangYuk 2024" class="timeline-img">
+                <div class="timeline-text">
+                    <h3>Lahirnya SumbangYuk</h3>
+                    <p>Setelah melihat kebutuhan besar akan platform yang bisa menghubungkan para donatur dengan mereka yang membutuhkan, SumbangYuk secara resmi diluncurkan. Dengan visi untuk membantu lebih banyak masyarakat, kami mulai mengembangkan platform digital untuk mempermudah proses donasi.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Misi, Visi, Tujuan Section -->
+<section>
+    <div class="mission-vision-section">
+        <div class="mission-box">
+            <span class="mission-icon">🎯</span>
+            <h3 class="mission-title">Misi</h3>
+            <p>Memudahkan siapa saja berbagi barang layak pakai untuk membantu yang membutuhkan. Setiap barang punya kesempatan kedua untuk membawa manfaat dan harapan.</p>
+        </div>
+
+        <div class="mission-box">
+            <span class="mission-icon">👁</span>
+            <h3 class="mission-title">Visi</h3>
+            <p>Menjadi platform donasi barang terpercaya di indonesia yang menghubungkan kebaikan dari rumah ke rumah, komunitas ke komunitas, hingga ke seluruh penjuru negeri</p>
+        </div>
+
+        <div class="mission-box">
+            <span class="mission-icon">🎯</span>
+            <h3 class="mission-title">Tujuan</h3>
+            <p>
+                - Meningkatkan kesadaran berbagi barang
+                - Mempermudah donasi agar lebih banyak tersalurkan
+                - Mendukung gaya hidup ramah lingkungan
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Penghargaan Section -->
+<section class="awards-section">
+    <h2 class="section-title">Penghargaan Kami</h2>
+    <div class="awards-container">
+        <div class="award-card">
+            <img src="/api/placeholder/400/320" alt="Penghargaan 2019" class="award-img">
+            <div class="award-content">
+                <h3>Komunitas Peduli Lingkungan 2024</h3>
+                <p>Penghargaan dariGreenFuture ID atas kontribusi nyata dalam mengurangi limbah melalui gerakan sumbang barang.</p>
+            </div>
+        </div>
+
+        <div class="award-card">
+            <img src="/api/placeholder/400/320" alt="Penghargaan Fundraising Digital" class="award-img">
+            <div class="award-content">
+                <h3>Fundraising Digital Terbaik 2024</h3>
+                <p>Diberikan oleh infonesia Fundraising Awaed atas inovasi platform donasi digital berbasis barang preloved.</p>
+            </div>
+        </div>
+
+        <div class="award-card">
+            <img src="/api/placeholder/400/320" alt="Startup Sosial Inspiratif" class="award-img">
+            <div class="award-content">
+                <h3>Startup Sosial Inspiratif 2020</h3>
+                <p>Penghargaan dari Kampus Merdeka atas inisiatif sosial yang berdampak melalui pemanfaatan teknologi inklusif.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section>
+    <h2 class="section-title">Team</h2>
+    <div class="team-section">
+        <div class="team-info">
+            <p>Di balik SumbangYuk, ada tim penuh semangat yang percaya bahwa setiap aksi kecil bisa berdampak besar. Kami bekerja sama untuk memastikan setiap barang yang didonasikan sampai ke tangan yang tepat.</p>
+        </div>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="member1.jpg" alt="Team Member 1" class="team-img">Alvina
+            </div>
+            <div class="team-member">
+                <img src="member2.jpg" alt="Team Member 2" class="team-img">Risma
+            </div>
+            <div class="team-member">
+                <img src="member3.jpg" alt="Team Member 3" class="team-img">Mazaya
+            </div>
+            <div class="team-member">
+                <img src="member4.jpg" alt="Team Member 4" class="team-img">Jia
+            </div>
+        </div>
+    </div>
+
+    <div class="quote">
+        "Bukan seberapa banyak yang kita berikan, tetapi seberapa besar cinta yang kita tanamkan dalam pemberian itu"
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <div class="footer-logo">
+                <span class="logo-icon">SumbangYuk</span="> 
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Links</h3>
+            <ul class="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Donasi Barang</a></li>
+                <li><a href="#">Relawan Donasi</a></li>
+                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="#">Kebijakan Privasi</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Jl. Sumbangan No. 123, Jakarta Selatan</p>
+            <p>Email: info@sumbangyuk.id</p>
+            <p>Phone: 0812-3456-7890</p>
+        </div>
+
+        <div class="footer-section">
+            <div class="hashtag">#SumbangIniBerikanBerkah</div>
+            <div class="hashtag">#SumbangYuk</div>
+            
+            <ul class="social-links">
+                <li><a href="#">📘</a></li>
+                <li><a href="#">📸</a></li>
+                <li><a href="#">🐦</a></li>
+                <li><a href="#">📺</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+```
+
+</body>
+</html>
