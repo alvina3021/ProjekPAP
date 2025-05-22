@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #FFFFFF, #DDE6ED);
+    min-height: 100vh;
+    flex-direction: column;
+    display: flex; 
+}
+    
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; 
+}
+    
+/* Header Styles */
+header {
+    background-color: #ffffff;
+    padding: 16px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    height: 80px;
+}
+        
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+        
+.logo {
+    display: flex;
+    align-items: center;
+}
+        
+.logo-text {
+    font-size: 20px;
+    font-weight: 700;
+    font-weight: bold;
+    color: #333333;
+    margin-left: 8px;
+}
+        
+.nav-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+        
+.nav-menu li {
+    margin-left: 24px;
+}
+        
+.nav-menu a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 6px 15px;
+    font-family:manrope;
+}
+
+.nav-menu a.login-register {
+    background-color: #ffffff;
+    border: 2px solid #333333;
+    padding: 8px 24px;
+    border-radius: 24px;
+    color: #333333;
+    font-family: manrope;
+    font-weight: 500;
+    transition:all 0.3s ease;
+    margin-left: 20px;
+}
+
+.aktivitas-main{
+    text-align: center;
+    font-family:manrope;
+    font-weight: 500;
+    margin-top: 30px;
+    
+}
+
+/* Search box */
+.search-box {
+    position: relative;
+    width: 100%;
+    max-width: 250px;
+    background-color: transparent;
+    margin-left: 70px;
+    margin-top: 50px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 40px 10px 15px; /* space for icon */
+    border: 1px solid #000000;
+    border-radius: 30px; /* fully rounded corners */
+    font-size: 14px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+    margin-left: 70px;
+    margin-top: 50px;
+    margin-right: 70px;
+}
+
+.activity-card {
+    background-color: linear-gradient(to bottom, #FFFFFF, #DDE6ED);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.activity-image {
+    height: 180px;
+    overflow: hidden;
+}
+
+.activity-image img {
+    width: 387px;
+    height: 281.6px;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 30px;
+}
+
+.activity-content {
+    width: 100%;
+    padding: 1.2rem 1rem;
+    box-sizing: border-box;
+}
+
+.activity-title {
+    font-size: 20px;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    color: #333;
+    text-align:justify;
+}
+
+.activity-description {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+
+
+.donation-invite {
+    margin: 4rem auto 2rem;
+    text-align: left;
+    margin-left: 70px;
+    margin-top: 10px;
+}
+
+.invite-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+
+.invite-subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.invite-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s ease;
+    width: 210px;
+    height:50px;
+    text-align: justify;
+}
+
+.btn-primary {
+    background-color: #123458;
+    color: #F1EFEC;
+    border: none;
+    margin-left: 1px;
+    
+}
+
+.btn-primary:hover {
+    background-color: #001f3f;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #000000;
+    border: 2px solid #002f5f;
+    margin-right: 100px;
+}
+
+.btn-secondary:hover {
+    background-color: #123458;
+    color: #fff;
+}
+
+/* Kata Motivasi */
+.footer-quote {
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 27px;
+    font-style: italic;
+    color: #000000;
+    font-weight: 700;
+    margin-top: 100px;
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: #123458;
+    color: #fff;
+    padding: 3rem 2rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1 1 200px;
+    min-width: 180px;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.footer-socials a {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-right: 0.75rem;
+    transition: color 0.3s ease;
+    width: 63px;
+    height: 63px;
+    margin-top: 1854px;
+    
+}
+
+.footer-socials a:hover {
+    color: #ccc;
+}
+
+.footer-column h4 {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.3rem; 
+    border-bottom: 4px solid #ffffff; 
+    display: inline-block; 
+    width: 219.5px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-hashtags p {
+    font-size: 0.9rem;
+    margin: 0.4rem 0;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 1200px) {
+    .header-container {
+        padding: 0 10px;
+    }
+    .nav-menu {
+        margin-left: 0;
+    }
+
+    .nav-menu li {
+        margin-left: 16px;
+    }
+
+    .nav-menu a {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+    .nav-menu a.login-register {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    .login-box {
+        padding: 20px;
+        width: 100%;
+    }
+}
+
+
+
+
