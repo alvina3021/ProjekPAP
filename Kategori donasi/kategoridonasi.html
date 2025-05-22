@@ -1,0 +1,180 @@
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dots = document.querySelectorAll('.dot');
+            const donationCategories = document.querySelector('.donation-categories');
+            
+            // Update active dot based on scroll position
+            donationCategories.addEventListener('scroll', function() {
+                const scrollPosition = donationCategories.scrollLeft;
+                const maxScroll = donationCategories.scrollWidth - donationCategories.clientWidth;
+                const scrollRatio = scrollPosition / maxScroll;
+                
+                // Calculate which dot should be active
+                const totalDots = dots.length;
+                const activeDotIndex = Math.min(
+                    Math.floor(scrollRatio * totalDots), 
+                    totalDots - 1
+                );
+                
+                // Update dots
+                dots.forEach((dot, index) => {
+                    if (index === activeDotIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            });
+            
+            // Click on dots to scroll
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', function() {
+                    const totalDots = dots.length;
+                    const maxScroll = donationCategories.scrollWidth - donationCategories.clientWidth;
+                    const scrollTo = (index / (totalDots - 1)) * maxScroll;
+                    
+                    donationCategories.scrollTo({
+                        left: scrollTo,
+                        behavior: 'smooth'
+                    });
+                });
+
+                document.querySelectorAll(".nav-menu a").forEach(function(link) {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+            const text = this.textContent.trim();
+
+            switch (text) {
+                case "Donasi":
+                    window.location.href = "../Kategori donasi/kategoridonasi.html";
+                    break;
+                case "Riwayat":
+                    window.location.href = "../Riwayat Donasi/riwayatdonasi.html";
+                    break;
+                case "Tentang":
+                    window.location.href = "../AboutUs/aboutus.html";
+                    break;
+                case "Aktivitas":
+                    window.location.href = "aktivitas.html";
+                    break;
+                case "Mulai Berbagi":
+                    window.location.href = "login.html";
+                    break;
+            }
+        });
+    });
+            });
+        });
+    </script>
+    
+    <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SumbangYuk - Donasi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styleKategoriDonasi.css">
+</head>
+<body>
+  <header>
+        <div class="container header-container">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 4H3C1.89543 4 1 4.89543 1 6V18C1 19.1046 1.89543 20 3 20H21C22.1046 20 23 19.1046 23 18V6C23 4.89543 22.1046 4 21 4Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="logo-text">SumbangYuk</span>
+            </div>
+             <ul class="nav-menu">
+    <li><a href="kategoridonasi.html">Donasi</a></li>
+    <li><a href="../Riwayat Donasi/riwayatdonasi.html">Riwayat</a></li>
+    <li><a href="../AboutUs/aboutus.html">Tentang</a></li>
+    <li><a href="aktivitas.html">Aktivitas</a></li>
+    <li><a href="login.html" class="login-register">Mulai Berbagi</a></li>
+</ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="donation-intro">
+            <h1>Barang Apa Saja yang Bisa Kamu Donasikan?</h1>
+            <p>Sebelum berdonasi, yuk cek dulu jenis-jenis barang yang bisa kami terima agar donasimu tepat guna dan bermanfaat</p>
+        </div>
+
+        <div class="donation-container">
+            <div class="donation-categories">
+                <div class="category-card">
+                    <div class="category-img">
+                        <img src="alatulis.jpg" alt="Buku dan Alat Tulis" />
+                    </div>
+                    <div class="category-info">
+                        <h3>Buku dan Alat Tulis</h3>
+                        <p>Buku bacaan, pelajaran, atau alat tulis yang masih bisa digunakan untuk belajar di sekolah atau rumah</p>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-img">
+                        <img src="bim20ptg.png" alt="Mainan dan Boneka" />
+                    </div>
+                    <div class="category-info">
+                        <h3>Mainan dan Boneka</h3>
+                        <p>Mainan anak-anak yang masih berfungsi, tidak rusak, dan aman digunakan (tidak mengandung bagian tajam atau kecil yang mudah lepas)</p>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-img">
+                        <img src="elektr.jpg" alt="Peralatan Elektronik" />
+                    </div>
+                    <div class="category-info">
+                        <h3>Peralatan Elektronik</h3>
+                        <p>Peralatan seperti kipas angin, blender, atau setrika yang masih menyala dan bisa dipakai dengan aman</p>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-img">
+                        <img src="pakaian.jpg" alt="Pakaian Layak Pakai" />
+                    </div>
+                    <div class="category-info">
+                        <h3>Pakaian Layak Pakai</h3>
+                        <p>Baju, jaket, celana, atau kerudung yang bersih, tidak sobek, dan masih layak dipakai sehari-hari</p>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-img">
+                        <img src="sepatu.jpg" alt="Tas dan Sepatu" />
+                    </div>
+                    <div class="category-info">
+                        <h3>Tas dan Sepatu</h3>
+                        <p>Tas sekolah, ransel, atau sepatu yang tidak rusak, solnya masih utuh, dan layak pakai untuk aktivitas harian</p>
+                    </div>
+                </div>
+
+                 <div class="category-card">
+                    <div class="category-img">
+                        <img src="alatrumah.jpg" alt="Peralatan Dapur" />
+                    </div>
+                    <div class="category-info">
+                        <h3>Peralatan Dapur</h3>
+                        <p>Barang seperti piring, gelas, atau alat masak yang tidak retak, bersih, dan masih bisa digunakan untuk kebutuhan dapur</p>
+                    </div>
+                </div>
+
+            <div class="scroll-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                
+            </div>
+        </div>
+
+        <div class="donate-button">
+            <button>Donasi Sekarang</button>
+        </div>
+    </main>
+</body>
+</html>
