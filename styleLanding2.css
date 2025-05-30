@@ -1,34 +1,81 @@
- * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Manrope', sans-serif;
-        }
 
-        body {
-            background: #f4f4f4;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
+body {
+    background: linear-gradient(to bottom, #FFFFFF, #DDE6ED);
+    min-height: 100vh;
+    flex-direction: column;
+    display: flex; 
+}
+    
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; 
+}
+    
+/* Header Styles */
+header {
+    background-color: #ffffff;
+    padding: 16px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    height: 80px;
 
-        header {
-            padding: 16px 0;
-            position: sticky;
-            top: 0;
-            width: 100%;
-            z-index: 100;
-            height: 80px;
-            
-            background: transparent;
+    background: transparent;
             position: fixed;
             transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+        
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+        
+.logo {
+    display: flex;
+    align-items: center;
+}
+        
+.logo-text {
+    font-size: 20px;
+    font-weight: 700;
+    font-weight: bold;
+    color: #333333;
+    margin-left: 8px;
+}
+        
+.nav-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+        
+.nav-menu li {
+    margin-left: 24px;
+}
+        
+.nav-menu a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 6px 15px;
+    font-family:manrope;
 }
 
 .scrolled {
@@ -356,6 +403,7 @@
     line-height: 1.5;
     text-align: justify;
 }
+
 
 /* Kata Motivasi */
 .footer-quote {

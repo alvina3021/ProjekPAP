@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -73,16 +74,10 @@ header {
     font-family:manrope;
 }
 
-.nav-menu a.login-register {
-    background-color: #ffffff;
-    border: 2px solid #333333;
-    padding: 8px 24px;
-    border-radius: 24px;
-    color: #333333;
-    font-family: manrope;
-    font-weight: 500;
-    transition:all 0.3s ease;
-    margin-left: 20px;
+.kontak {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .aktivitas-main{
@@ -112,7 +107,7 @@ header {
     border-radius: 30px; /* fully rounded corners */
     font-size: 14px;
     font-family: 'Manrope', sans-serif;
-    font-style: italic;
+     font-style: italic;
 }
 
 .search-icon {
@@ -232,7 +227,7 @@ header {
 
 .invite-buttons {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
 }
@@ -281,7 +276,6 @@ header {
     color: #000000;
     font-weight: 700;
     margin-top: 100px;
-    width: 100%;
 }
 
 /* Footer Styles */
@@ -289,7 +283,6 @@ header {
     background-color: #123458;
     color: #fff;
     padding: 3rem 2rem;
-    width: 100%;
 }
 
 .footer-container {
@@ -363,6 +356,7 @@ header {
 }
 
 
+
 @media screen and (max-width: 1200px) {
     .header-container {
         padding: 0 10px;
@@ -388,6 +382,15 @@ header {
         width: 100%;
     }
 }
+
+
+
+
+
+
+
+
+
 
 
 

@@ -6,10 +6,11 @@
     <title>SumbangYuk - Donasi</title>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styleKategoriDonasi.css">
+    <link rel="stylesheet" href="styleKategori.css">
 </head>
 <body>
-  <header>
+  <!-- Header -->
+    <header>
         <div class="container header-container">
             <div class="logo">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -17,20 +18,16 @@
                 </svg>
                 <span class="logo-text">SumbangYuk</span>
             </div>
-             <ul class="nav-menu">
-    <li><a href="kategoridonasi.html">Donasi</a></li>
-    <li><a href="../Riwayat Donasi/riwayatdonasi.html">Riwayat</a></li>
-    <li><a href="../AboutUs/aboutus.html">Tentang</a></li>
-    <li><a href="aktivitas.html">Aktivitas</a></li>
-</ul>
-        <div class="kontak">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
-        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-        <circle cx="12" cy="7" r="4"></circle>
-      </svg>
-    </div>
-  </div>
-</header>
+            <!-- Navigasi -->
+            <ul class="nav-menu">
+                <li><a href="#">Donasi</a></li>
+                <li><a href="#">Riwayat</a></li>
+                <li><a href="#">Tentang</a></li>
+                <li><a href="#">Aktivitas</a></li>
+                <li><a href="#Login.html" class="login-register">Mulai Berbagi</a></li>
+            </ul>
+        </div>
+    </header>
 
     <main>
         <div class="donation-intro">
@@ -42,7 +39,7 @@
             <div class="donation-categories">
                 <div class="category-card">
                     <div class="category-img">
-                        <img src="alatulis.jpg" alt="Buku dan Alat Tulis" />
+                        <img src="Kategori donasi/alatulis.jpg" alt="Buku dan Alat Tulis" />
                     </div>
                     <div class="category-info">
                         <h3>Buku dan Alat Tulis</h3>
@@ -52,7 +49,7 @@
 
                 <div class="category-card">
                     <div class="category-img">
-                        <img src="bim20ptg.png" alt="Mainan dan Boneka" />
+                        <img src="Kategori donasi/bim20ptg.png" alt="Mainan dan Boneka" />
                     </div>
                     <div class="category-info">
                         <h3>Mainan dan Boneka</h3>
@@ -62,7 +59,7 @@
                 
                 <div class="category-card">
                     <div class="category-img">
-                        <img src="elektr.jpg" alt="Peralatan Elektronik" />
+                        <img src="Kategori donasi/elektr.jpg" alt="Peralatan Elektronik" />
                     </div>
                     <div class="category-info">
                         <h3>Peralatan Elektronik</h3>
@@ -72,7 +69,7 @@
 
                 <div class="category-card">
                     <div class="category-img">
-                        <img src="pakaian.jpg" alt="Pakaian Layak Pakai" />
+                        <img src="Kategori donasi/pakaian.jpg" alt="Pakaian Layak Pakai" />
                     </div>
                     <div class="category-info">
                         <h3>Pakaian Layak Pakai</h3>
@@ -82,7 +79,7 @@
 
                 <div class="category-card">
                     <div class="category-img">
-                        <img src="sepatu.jpg" alt="Tas dan Sepatu" />
+                        <img src="Kategori donasi/sepatu.jpg" alt="Tas dan Sepatu" />
                     </div>
                     <div class="category-info">
                         <h3>Tas dan Sepatu</h3>
@@ -92,7 +89,7 @@
 
                  <div class="category-card">
                     <div class="category-img">
-                        <img src="alatrumah.jpg" alt="Peralatan Dapur" />
+                        <img src="Kategori donasi/alatrumah.jpg" alt="Peralatan Dapur" />
                     </div>
                     <div class="category-info">
                         <h3>Peralatan Dapur</h3>
@@ -102,27 +99,31 @@
 
         </div>
 
-        <div class="donate-button">
-            <button>Donasi Sekarang</button>
-        </div>
+        <!-- dinonaftifkan <div class="donate-button">
+             <button>Donasi Sekarang</button>
+        </div> -->
     </main>
     <script>
+    // Navigasi menu header
 // Navigasi menu header
 document.querySelectorAll('.nav-menu li a').forEach(function(link) {
     const text = link.textContent.trim().toLowerCase();
     link.addEventListener('click', function(e) {
         if (text === 'tentang') {
             e.preventDefault();
-            window.location.href = '../Tentang.html';
+            window.location.href = '../AboutUs/aboutus.html';
         } else if (text === 'riwayat') {
             e.preventDefault();
-            window.location.href = '../Riwayat.html';
+            window.location.href = '../Riwayat Donasi/riwayatdonasi.html';
+        } else if (text === 'mulai berbagi') {
+            e.preventDefault();
+            window.location.href = 'login.html';
         } else if (text === 'donasi') {
             e.preventDefault();
-            window.location.href = '../Kategori Donasi/kategoridonasi.html';
+            window.location.href = 'KategoriDonasi.html';
         } else if (text === 'aktivitas') {
             e.preventDefault();
-            window.location.href = '../Aktivitas2.html';
+            window.location.href = '../aktivitas.html';
         }
     });
 });

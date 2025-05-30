@@ -73,10 +73,16 @@ header {
     font-family:manrope;
 }
 
-.kontak {
-    margin-left: 10px;
-    display: flex;
-    align-items: center;
+.nav-menu a.login-register {
+    background-color: #ffffff;
+    border: 2px solid #333333;
+    padding: 8px 24px;
+    border-radius: 24px;
+    color: #333333;
+    font-family: manrope;
+    font-weight: 500;
+    transition:all 0.3s ease;
+    margin-left: 20px;
 }
 
  main {
@@ -172,20 +178,6 @@ header {
             background-color: linear-gradient(to bottom, #FFFFFF, #DDE6ED);
         }
 
-        .donate-button {
-            text-align: right;
-            margin-top: 30px;
-        }
-
-        .donate-button button {
-            background-color: #0e3e64;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 25px;
-            font-size: 14px;
-            cursor: pointer;
-        }
          @media (max-width: 768px) {
         nav {
             display: none;
@@ -194,6 +186,7 @@ header {
         header {
             flex-wrap: wrap;
             justify-content: space-between;
+            
         }
 
         .logo {

@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="aboutUs.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="aboutUs.css">
+    <link rel="stylesheet" href="styleTentang.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container header-container">
             <div class="logo">
@@ -19,14 +18,18 @@
                 </svg>
                 <span class="logo-text">SumbangYuk</span>
             </div>
-            <!-- Navigasi -->
             <ul class="nav-menu">
                 <li><a href="">Donasi</a></li>
                 <li><a href="">Riwayat</a></li>
                 <li><a href="">Tentang</a></li>
                 <li><a href="">Aktivitas</a></li>
-                <li><a href="" class="login-register">Mulai Berbagi</a></li>
             </ul>
+            <div class="kontak">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </div>
         </div>
     </header>
 
@@ -41,7 +44,7 @@
             <div class="timeline-item">
                 <div class="timeline-year">2020</div>
                 <div class="timeline-content">
-                    <img src="2020.jpg" alt="Awal Mula Komunitas 2020" class="timeline-img">
+                    <img src="AboutUs/2020.jpg" alt="Awal Mula Komunitas 2020" class="timeline-img">
                     <div class="timeline-text">
                         <h3>Awal Mula Komunitas</h3>
                         <p>Tren preloved sedang marak, dan di saat yang sama, banyak bencana alam melanda Indonesia. Dari kepedulian itu, kami membentuk komunitas kecil untuk mengumpulkan barang layak pakai dan menyalurkannya ke para korban bencana. Semua proses masih serba manual, tapi semangatnya besar</p>
@@ -52,7 +55,7 @@
             <div class="timeline-item">    
                 <div class="timeline-year">2024</div>
                 <div class="timeline-content right">
-                    <img src="2024.jpg" alt="Lahirnya SumbangYuk 2024" class="timeline-img">
+                    <img src="AboutUs/2024.jpg" alt="Lahirnya SumbangYuk 2024" class="timeline-img">
                     <div class="timeline-text">
                         <h3>Lahirnya SumbangYuk</h3>
                         <p>Melihat semakin besarnya dukungan dan kebutuhan, kami membangun platform digital bernama SumbangYuk. Tujuannya jelas: membuat donasi barang bekas jadi mudah, cepat, dan berdampak. Di tahun ini juga, kami resmi bermitra dengan berbagai komunitas sosial</p>
@@ -126,7 +129,7 @@
         <div class="awards-container">
             <!--award 1-->
             <div class="award-card">
-                <img src="Penghargaan1.jpg" alt="Penghargaan 2019" class="award-img">
+                <img src="AboutUs/Penghargaan1.jpg" alt="Penghargaan 2019" class="award-img">
                 <div class="award-content">
                     <h3>Komunitas Peduli Lingkungan 2024</h3>
                     <p>Penghargaan dariGreenFuture ID atas kontribusi nyata dalam mengurangi limbah melalui gerakan sumbang barang.</p>
@@ -135,7 +138,7 @@
 
             <!--award 2-->
             <div class="award-card">
-                <img src="Penghargaan2.jpg" alt="Penghargaan Fundraising Digital" class="award-img">
+                <img src="AboutUs/Penghargaan2.jpg" alt="Penghargaan Fundraising Digital" class="award-img">
                 <div class="award-content">
                     <h3>Fundraising Digital Terbaik 2024</h3>
                     <p>Diberikan oleh infonesia Fundraising Awaed atas inovasi platform donasi digital berbasis barang preloved.</p>
@@ -144,7 +147,7 @@
 
             <!--award 3-->
             <div class="award-card">
-                <img src="Penghargaan3.jpg" alt="Startup Sosial Inspiratif" class="award-img">
+                <img src="AboutUs/Penghargaan3.jpg" alt="Startup Sosial Inspiratif" class="award-img">
                 <div class="award-content">
                     <h3>Startup Sosial Inspiratif 2020</h3>
                     <p>Penghargaan dari Kampus Merdeka atas inisiatif sosial yang berdampak melalui pemanfaatan teknologi inklusif.</p>
@@ -164,19 +167,19 @@
             <!-- Team Members 1 -->
             <div class="team-member">
                 <span class="member-name">Alvina Damayanti</span>
-                <img src="member1.jpg" alt="Team Member 1" class="team-img">
+                <img src="AboutUs/member1.jpg" alt="Team Member 1" class="team-img">
             </div>
             <div class="team-member">
                 <span class="member-name">Risma Aulia</span>
-                <img src="member2.jpg" alt="Team Member 2" class="team-img">
+                <img src="AboutUs/member2.jpg" alt="Team Member 2" class="team-img">
             </div>
             <div class="team-member">
                 <span class="member-name">Mazaya Nur</span>
-                <img src="member3.jpg" alt="Team Member 3" class="team-img">
+                <img src="AboutUs/member3.jpg" alt="Team Member 3" class="team-img">
             </div>
             <div class="team-member">
                 <span class="member-name">Faujiatul</span>
-                <img src="member4.jpg" alt="Team Member 4" class="team-img">
+                <img src="AboutUs/member4.jpg" alt="Team Member 4" class="team-img">
             </div>
         </div>
     </section>
@@ -236,45 +239,42 @@
             link.addEventListener('click', function(e) {
                 if (text === 'tentang') {
                     e.preventDefault();
-                    window.location.href = 'aboutus.html';
+                    window.location.href = 'Tentang.html';
                 } else if (text === 'riwayat') {
                     e.preventDefault();
-                    window.location.href = '../Riwayat Donasi/riwayatdonasi.html';
-                } else if (text === 'mulai berbagi') {
-                    e.preventDefault();
-                    window.location.href = '../login.html';
+                    window.location.href = 'Riwayat.html';
                 } else if (text === 'aktivitas') {
                     e.preventDefault();
-                    window.location.href = '../aktivitas.html';
+                    window.location.href = 'Aktivitas2.html';
                 } else if (text === 'donasi') {
                     e.preventDefault();
-                    window.location.href = '../KategoriDonasi.html';
+                    window.location.href = 'Kategori donasi/kategoridonasi.html';
                 }
             });
         });
 
         // Navigasi footer
-        document.querySelectorAll('.footer-column ul li a').forEach(function(link) {
-            const text = link.textContent.trim().toLowerCase();
-            link.addEventListener('click', function(e) {
-                if (text === 'beranda') {
-                    e.preventDefault();
-                    window.location.href = '../Landing.html';
-                } else if (text === 'donasikan barang' || text === 'donasi') {
-                    e.preventDefault();
-                    window.location.href = '../KategoriDonasi.html';
-                } else if (text === 'riwayat donasi') {
-                    e.preventDefault();
-                    window.location.href = '../Riwayat Donasi/riwayatdonasi.html';
-                } else if (text === 'tentang kami') {
-                    e.preventDefault();
-                    window.location.href = 'aboutus.html';
-                } else if (text === 'aktivitas terbaru') {
-                    e.preventDefault();
-                    window.location.href = '../aktivitas.html';
-                }
-            });
+    document.querySelectorAll('.footer-column ul li a').forEach(function(link) {
+        const text = link.textContent.trim().toLowerCase();
+        link.addEventListener('click', function(e) {
+            if (text === 'beranda') {
+                e.preventDefault();
+                window.location.href = 'Landing2.html';
+            } else if (text === 'donasikan barang' || text === 'donasi') {
+                e.preventDefault();
+                window.location.href = 'Kategori donasi/kategoridonasi.html';
+            } else if (text === 'riwayat donasi') {
+                e.preventDefault();
+                window.location.href = 'Riwayat.html';
+            } else if (text === 'tentang kami') {
+                e.preventDefault();
+                window.location.href = 'Tentang.html';
+            } else if (text === 'aktivitas terbaru') {
+                e.preventDefault();
+                window.location.href = 'Aktivitas2.html';
+            }
         });
+    });
     </script>
 </body>
 </html>

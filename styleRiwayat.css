@@ -1,0 +1,400 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #FFFFFF, #DDE6ED);
+    min-height: 100vh;
+    flex-direction: column;
+    display: flex; 
+}
+    
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; 
+}
+    
+/* Header Styles */
+header {
+    background-color: #ffffff;
+    padding: 16px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    height: 80px;
+}
+        
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+        
+.logo {
+    display: flex;
+    align-items: center;
+}
+        
+.logo-text {
+    font-size: 20px;
+    font-weight: 700;
+    font-weight: bold;
+    color: #333333;
+    margin-left: 8px;
+}
+        
+.nav-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+        
+.nav-menu li {
+    margin-left: 24px;
+}
+        
+.nav-menu a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 6px 15px;
+    font-family:manrope;
+}
+
+.kontak {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* main content */
+main {
+    max-width: 1200px;
+    padding: 40px 20px;
+    margin: 100px auto 0;
+}
+
+.history-intro {
+    margin-bottom: 30px;
+}
+
+.history-intro h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #1e1e1e;
+    margin-bottom: 10px;
+}
+
+.history-intro p {
+    font-size: 16px;
+    color: #4b4b4b;
+}
+
+.filter-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.filter-header h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.filter-icon {
+    margin-left: 8px;
+}
+
+.filter-dropdown,
+.search-box {
+    flex: 1;
+    min-width: 200px;
+}
+
+.dropdown-select,
+.search-input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.search-button {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.stats-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: #dce6f2;
+    border-radius: 12px;
+    padding: 15px 20px;
+    flex: 1;
+    text-align: center;
+    color: #333;
+    font-weight: 500;
+}
+
+.donation-list-header {
+    margin-bottom: 15px;
+}
+
+.donation-list-header h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1e1e1e;
+}
+
+.donation-list {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.donation-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1140px;
+    margin-right: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.donation-info {
+    display: flex;
+    align-items: center;
+}
+
+.donation-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.donation-img img {
+    width: 100%;
+    height: auto;
+}
+
+.donation-details h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.donation-details p {
+    font-size: 14px;
+    margin-bottom: 3px;
+    color: #555;
+}
+
+.donation-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.status-badge {
+    background: #d9fbd9;
+    color: #207a4e;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 15px;
+}
+
+.donate-again-btn {
+    background: #103e68;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 18px;
+    cursor: pointer;
+    font-size: 14px;
+}
+  
+.filters-and-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.filter-group {
+    display: flex;
+    flex: 2;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Style dropdown filters */
+.filter-dropdown select.dropdown-select {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  background-color: #fff;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.05);
+  min-width: 180px;
+  appearance: none;
+}
+
+/*search box*/
+.search-input {
+    width: 100%;
+    padding: 10px 15px;
+    padding-right: 40px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    background-color: #f8f8f8;
+}
+
+.search-button {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Stats group */
+.stats-group {
+    display: flex;
+    flex: 3;
+    gap: 15px;
+}
+
+.stat-card {
+    flex: 1;
+    background-color: #DDE6ED;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 14px;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Search input style */
+/* Search input */
+.search-input {
+  width: 100%;
+  padding: 10px 40px 10px 20px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  background-color: #fff;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.05);
+}
+
+.search-box {
+  position: relative;
+  width: 200px; /* Sama dengan dropdown Periode dan Status */
+}
+
+
+/* Search icon inside input */
+.search-icon {
+  position: absolute;
+  pointer-events: none; 
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #666;
+  pointer-events: none;
+}
+
+/* Search button next to input */
+.search-button {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Stats spacing */
+.stats-section {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background-color: #e8f0f7;
+  border-radius: 12px;
+  padding: 16px 24px;
+  font-weight: 600;
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 1200px) {
+    .header-container {
+        padding: 0 10px;
+    }
+    .nav-menu {
+        margin-left: 0;
+    }
+
+    .nav-menu li {
+        margin-left: 16px;
+    }
+
+    .nav-menu a {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+    .nav-menu a.login-register {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    .login-box {
+        padding: 20px;
+        width: 100%;
+    }
+}
+

@@ -1,33 +1,3 @@
-<script>
-// ...existing code...
-    // Navigasi Header
-    document.querySelectorAll(".nav-menu a").forEach(function(link) {
-        link.addEventListener("click", function(e) {
-            e.preventDefault();
-            const text = this.textContent.trim();
-
-            switch (text) {
-                case "Donasi":
-                    window.location.href = "../Kategori donasi/kategoridonasi.html";
-                    break;
-                case "Riwayat":
-                    window.location.href = "../Riwayat Donasi/riwayatdonasi.html";
-                    break;
-                case "Tentang":
-                    window.location.href = "../AboutUs/aboutus.html";
-                    break;
-                case "Aktivitas":
-                    window.location.href = "aktivitas.html";
-                    break;
-                case "Mulai Berbagi":
-                    window.location.href = "login.html";
-                    break;
-            }
-        });
-    });
-// ...existing code...
-</script>
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -47,15 +17,20 @@
                 </svg>
                 <span class="logo-text">SumbangYuk</span>
             </div>
-               <ul class="nav-menu">
-    <li><a href="../Kategori donasi/kategoridonasi.html">Donasi</a></li>
-    <li><a href="../Riwayat Donasi/riwayatdonasi.html">Riwayat</a></li>
-    <li><a href="../AboutUs/aboutus.html">Tentang</a></li>
+             <ul class="nav-menu">
+    <li><a href="Kategori Donasi/kategoridonasi.html">Donasi</a></li>
+    <li><a href="Riwayat Donasi/riwayatdonasi.html">Riwayat</a></li>
+    <li><a href="AboutUs/aboutus.html">Tentang</a></li>
     <li><a href="aktivitas.html">Aktivitas</a></li>
-    <li><a href="login.html" class="login-register">Mulai Berbagi</a></li>
 </ul>
-        </div>
-    </header>
+        <div class="kontak">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+        <circle cx="12" cy="7" r="4"></circle>
+      </svg>
+    </div>
+  </div>
+</header>
 
     <div class="container">
         <div class="donation-card">
@@ -66,98 +41,133 @@
                 <div class="form-header">
                     <h2>Ayo Mulai Berdonasi</h2>
                     <div class="flower-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12" cy="12" r="8" fill="#FF3333" />
-                            <circle cx="12" cy="12" r="4" fill="#FF8080" />
-                            <path d="M12 4C13.5 4 16 6 16 8C16 6 18.5 4 20 4C18.5 4 16 2 16 0C16 2 13.5 4 12 4Z" fill="#FF3333" />
-                            <path d="M12 20C13.5 20 16 18 16 16C16 18 18.5 20 20 20C18.5 20 16 22 16 24C16 22 13.5 20 12 20Z" fill="#FF3333" />
-                            <path d="M4 12C4 10.5 6 8 8 8C6 8 4 5.5 4 4C4 5.5 2 8 0 8C2 8 4 10.5 4 12Z" fill="#FF3333" />
-                            <path d="M20 12C20 10.5 18 8 16 8C18 8 20 5.5 20 4C20 5.5 22 8 24 8C22 8 20 10.5 20 12Z" fill="#FF3333" />
-                            <path d="M4 12C4 13.5 6 16 8 16C6 16 4 18.5 4 20C4 18.5 2 16 0 16C2 16 4 13.5 4 12Z" fill="#FF3333" />
-                        </svg>
+                        <img src="formdonasi.png" alt="Flower Icon" />
                     </div>
                 </div>
 
-                <form>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Nama Lengkap">
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Email">
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" class="form-control" placeholder="No Telepon">
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Alamat Penjemputan">
-                    </div>
-                    
-                    <div class="form-group select-wrapper">
-                        <input type="text" class="form-control" placeholder="Kategori Barang">
-                    </div>
-                    
+                <form action="simpan_donasi.php" method="POST">
+    <div class="form-group">
+        <input type="text" class="form-control" name="nama" placeholder="Nama Lengkap" required>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <input type="email" class="form-control" name="email" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+            <input type="tel" class="form-control" name="telepon" placeholder="No Telepon" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="alamat" placeholder="Alamat Penjemputan" required>
+    </div>
+    <div class="form-group select-wrapper">
+        <select class="form-control" name="kategori-barang" required>
+            <option value="" disabled selected>Pilih Kategori Barang</option>
+            <option value="buku-alat-tulis">Buku dan Alat Tulis</option>
+            <option value="mainan-boneka">Mainan dan Boneka</option>
+            <option value="pakaian-layak-pakai">Pakaian Layak Pakai</option>
+            <option value="tas-sepatu">Tas dan Sepatu</option>
+        </select>
+    </div> 
                     <button type="submit" class="submit-btn">Kirim Donasi</button>
                 </form>
             </div>
         </div>
     </div>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-left">
-                <div class="footer-logo">
-                    <span class="footer-logo-icon">🎁</span>
-                    <span>SumbangYuk</span>
-                </div>
-                <div class="social-icons">
-                    <div class="social-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#16375a" viewBox="0 0 24 24">
-                            <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
-                        </svg>
-                    </div>
-                    <div class="social-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#16375a" viewBox="0 0 24 24">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                        </svg>
-                    </div>
-                    <div class="social-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#16375a" viewBox="0 0 24 24">
-                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                        </svg>
-                    </div>
-                    <div class="social-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#16375a" viewBox="0 0 24 24">
-                            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-nav">
-                <h3>Navigasi</h3>
-                <a href="#">Donasikan</a>
-                <a href="#">Riwayat</a>
-                <a href="#">Tentang</a>
-                <a href="#">Aktivitas</a>
-                <a href="#">Hubungi Kami</a>
-            </div>
-            
-            <div class="footer-contact">
-                <h3>Hubungi Kami</h3>
-                <p>Jl. Ridsu No.16, Jakarta</p>
-                <p>info@sumbangyuk.id</p>
-                <p>0811-1807-9000</p>
-            </div>
-            
-            <div class="hashtags">
-                <div class="hashtag">#SatuBarangBisaBerarti</div>
-                <div class="hashtag">#SumbangYuk</div>
+        <!-- Footer  -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <!-- Logo & Social Media -->
+        <div class="footer-column">
+            <div class="footer-logo">SumbangYuk</div>
+            <div class="footer-socials">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
-    </footer>
+
+        <!-- Navigation Links -->
+        <div class="footer-column">
+            <h4>Links</h4>
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Donasikan Barang</a></li>
+                <li><a href="#">Riwayat Donasi</a></li>
+                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="#">Aktivitas Terbaru</a></li>
+                <li><a href="#">Hubungi Kami</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-column">
+            <h4>Hubungi Kami</h4>
+            <p>Jl. Peduli No. 10, Jakarta<br>
+            info@sumbangyuk.id<br>
+            0811-9627-9260</p>
+        </div>
+
+        <!-- Hashtags -->
+        <div class="footer-column footer-hashtags">
+            <p>#SatuBarangBisaBerarti</p>
+            <p>#SumbangYuk</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// Navigasi header
+document.querySelectorAll('.nav-menu li a').forEach(function(link) {
+    const text = link.textContent.trim().toLowerCase();
+    link.addEventListener('click', function(e) {
+        if (text === 'tentang') {
+            e.preventDefault();
+            window.location.href = '../Tentang.html';
+        } else if (text === 'riwayat') {
+            e.preventDefault();
+            window.location.href = '../Riwayat.html';
+        } else if (text === 'aktivitas') {
+            e.preventDefault();
+            window.location.href = '../Aktivitas2.html';
+        } else if (text === 'donasi') {
+            e.preventDefault();
+            window.location.href = '../Kategori Donasi/kategoridonasi.html';
+        }
+    });
+});
+
+// Action tombol "Kirim Donasi"
+document.querySelector('.donation-form form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Terima kasih! Donasi Anda telah dikirim.');
+    window.location.href = '../Riwayat.html';
+});
+
+// Navigasi footer
+document.querySelectorAll('.footer-column ul li a').forEach(function(link) {
+    const text = link.textContent.trim().toLowerCase();
+    link.addEventListener('click', function(e) {
+        if (text === 'beranda') {
+            e.preventDefault();
+            window.location.href = '../landing2.html';
+        } else if (text === 'donasikan barang' || text === 'donasi') {
+            e.preventDefault();
+            window.location.href = '../Kategori Donasi/kategoridonasi.html';
+        } else if (text === 'riwayat donasi') {
+            e.preventDefault();
+            window.location.href = '../Riwayat.html';
+        } else if (text === 'tentang kami') {
+            e.preventDefault();
+            window.location.href = '../Tentang.html';
+        } else if (text === 'aktivitas terbaru') {
+            e.preventDefault();
+            window.location.href = '../Aktivitas2.html';
+        }
+    });
+});
+</script>
 </body>
 </html>

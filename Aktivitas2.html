@@ -6,10 +6,9 @@
     <title>Aktivitas Kami - SumbangYuk</title>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styleAktivitas.css">
+    <link rel="stylesheet" href="styleAktivitas2.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container header-container">
             <div class="logo">
@@ -18,33 +17,38 @@
                 </svg>
                 <span class="logo-text">SumbangYuk</span>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#">Donasi</a></li>
-                <li><a href="#">Riwayat</a></li>
-                <li><a href="#">Tentang</a></li>
-                <li><a href="#">Aktivitas</a></li>
-                <li><a href="#Login.html" class="login-register">Mulai Berbagi</a></li>
-            </ul>
-        </div>
-    </header>
+             <ul class="nav-menu">
+    <li><a href="kategoridonasi.html">Donasi</a></li>
+    <li><a href="../Riwayat Donasi/riwayatdonasi.html">Riwayat</a></li>
+    <li><a href="../AboutUs/aboutus.html">Tentang</a></li>
+    <li><a href="aktivitas.html">Aktivitas</a></li>
+</ul>
+        <div class="kontak">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+        <circle cx="12" cy="7" r="4"></circle>
+      </svg>
+    </div>
+  </div>
+</header>
 
     <!-- Main Content -->
-     <div class="main-container">
-        <div class="aktivitas-main">
-            <h1>Aktivitas Kami</h1>
-     </div>
+<div class="main-container">
+    <div class="aktivitas-main">
+        <h1>Aktivitas Kami</h1>
+    </div>
+    <!-- Search box dipindah ke sini, di bawah aktivitas-main -->
+    <div class="search-box">
+        <input type="text" class="search-input" placeholder="Cari Donasi..." />
+        <span class="search-icon">
+            <svg width="16" height="16" fill="none" stroke="#000" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+        </span>
+    </div>
+</div>
 
-     <!-- Search box -->
-        <div class="search-box">
-            <input type="text" class="search-input" placeholder="Cari Donasi..." />
-            <span class="search-icon">
-                <svg width="16" height="16" fill="none" stroke="#000" stroke-width="2" viewBox="0 0 24 24">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-            </span>
-        </div>
-    
     <!-- Activities Section -->
 <div class="activities-container">
     <!-- Activities Grid -->
@@ -111,18 +115,18 @@
             <h3 class="activity-title">Donasi Mainan Anak - Posyandu Ceria</h3>
         </div>
     </div>
-    </div>
+</div>
 </div>
 
     <!-- Ajakan Donasi Section -->
-    <section class="donation-invite">
+    <div class="donation-invite">
         <h2 class="invite-title">Tertarik Untuk Berdonasi?</h2>
             <p class="invite-subtitle">Yuk mulai sumbangkan barangmu atau jadi bagian dari aksi kami</p>
         <div class="invite-buttons">
             <a href="#" class="btn-primary">Donasikan Sekarang</a>
             <a href="#" class="btn-secondary">Riwayat Donasi</a>
         </div>
-    </section>
+    </div>
 
     <!-- Kata Motivasi -->
 <div class="footer-quote">
@@ -179,21 +183,30 @@ document.querySelectorAll('.nav-menu li a').forEach(function(link) {
     link.addEventListener('click', function(e) {
         if (text === 'tentang') {
             e.preventDefault();
-            window.location.href = 'AboutUs/aboutus.html';
+            window.location.href = 'Tentang.html';
         } else if (text === 'riwayat') {
             e.preventDefault();
-            window.location.href = 'Riwayat Donasi/riwayatdonasi.html';
+            window.location.href = 'Riwayat.html';
         } else if (text === 'donasi') {
             e.preventDefault();
-            window.location.href = 'KategoriDonasi.html';
+            window.location.href = 'Kategori donasi/kategoridonasi.html';
         } else if (text === 'aktivitas') {
             e.preventDefault();
-            window.location.href = 'aktivitas.html';
-        } else if (text === 'mulai berbagi') {
-            e.preventDefault();
-            window.location.href = 'login.html';
+            window.location.href = 'Aktivitas2.html';
         }
     });
+});
+
+// Action tombol "Donasikan Sekarang"
+document.querySelector('.btn-primary').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.location.href = 'Kategori donasi/kategoridonasi.html';
+});
+
+// Action tombol "Riwayat Donasi"
+document.querySelector('.btn-secondary').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.location.href = 'Riwayat.html';
 });
 
 // Navigasi footer
@@ -202,34 +215,23 @@ document.querySelectorAll('.footer-column ul li a').forEach(function(link) {
     link.addEventListener('click', function(e) {
         if (text === 'beranda') {
             e.preventDefault();
-            window.location.href = 'Landing.html';
+            window.location.href = 'Landing2.html';
         } else if (text === 'donasikan barang' || text === 'donasi') {
             e.preventDefault();
-            window.location.href = 'KategoriDonasi.html';
+            window.location.href = 'Kategori donasi/kategoridonasi.html';
         } else if (text === 'riwayat donasi') {
             e.preventDefault();
-            window.location.href = 'Riwayat Donasi/riwayatdonasi.html';
+            window.location.href = 'Riwayat.html';
         } else if (text === 'tentang kami') {
             e.preventDefault();
-            window.location.href = 'AboutUs/aboutus.html';
+            window.location.href = 'Tentang.html';
         } else if (text === 'aktivitas terbaru') {
             e.preventDefault();
-            window.location.href = 'aktivitas.html';
+            window.location.href = 'Aktivitas2.html';
         }
     });
 });
 
-// Action tombol "Donasikan Sekarang"
-document.querySelector('.btn-primary').addEventListener('click', function(e) {
-    e.preventDefault();
-    window.location.href = 'KategoriDonasi.html';
-});
-
-// Action tombol "Riwayat Donasi"
-document.querySelector('.btn-secondary').addEventListener('click', function(e) {
-    e.preventDefault();
-    window.location.href = 'Riwayat Donasi/riwayatdonasi.html';
-});
 </script>
 </body>
 </html>

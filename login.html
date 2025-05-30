@@ -20,10 +20,10 @@
             </div>
             <!-- Navigasi -->
             <ul class="nav-menu">
-                <li><a href="#">Donasi</a></li>
-                <li><a href="#">Riwayat</a></li>
-                <li><a href="#">Tentang</a></li>
-                <li><a href="#">Aktivitas</a></li>
+                <li><a href="#Kategori donasi/kategoridonasi.html">Donasi</a></li>
+                <li><a href="#Riwayat Donasi/riwayatdonasi.html">Riwayat</a></li>
+                <li><a href="#AboutUs/aboutus.html">Tentang</a></li>
+                <li><a href="#aktivitas.html">Aktivitas</a></li>
                 <li><a href="#Login.html" class="login-register">Mulai Berbagi</a></li>
             </ul>
         </div>
@@ -34,19 +34,19 @@
             <h1>Login</h1>
             <!-- Form Login -->
             <div class="login-form-container">
-                <form>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Nama" required>
-                        <span class="form-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="12" r="11" stroke="#000" stroke-width="1" fill="none"/>
-                                <circle cx="12" cy="8" r="4" stroke="#000" stroke-width="1" fill="none"/>
-                                <path d="M4 19C4 16 7.5 13.5 12 13.5C16.5 13.5 20 16 20 19" stroke="#000" stroke-width="1" fill="none"/>
-                            </svg>
-                        </span>
-                    </div>
-                    
-                    <div class="form-group">
+                <form action="login.php" method="POST">
+    <div class="form-group">
+        <input type="text" name="username" class="form-control" placeholder="Username" required>
+        <span class="form-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="11" stroke="#000" stroke-width="1" fill="none"/>
+                <circle cx="12" cy="8" r="4" stroke="#000" stroke-width="1" fill="none"/>
+                <path d="M4 19C4 16 7.5 13.5 12 13.5C16.5 13.5 20 16 20 19" stroke="#000" stroke-width="1" fill="none"/>
+            </svg>
+        </span>
+    </div>
+
+    <div class="form-group">
                         <input type="email" class="form-control" placeholder="Email" required>
                         <span class="form-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,27 +57,72 @@
                         </span>
                     </svg>
                     </div>
-                    
-                    <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Password" id="passwordInput" required>
-                    </div>
-                    
-                    <div class="options-row">
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="remember-me">
-                            <label for="remember-me">Ingat Saya</label>
-                        </div>
-                        <a href="#SignUp.html" class="forgot-password">Lupa Password</a>
-                    </div>
-                    
-                    <button type="submit" class="login-btn">Login</button>
-                    
-                    <a href="#SignUp.html" class="signup-link">Buat akun baru</a>
-                </form>
+
+    <div class="form-group">
+        <input type="password" name="password" class="form-control" placeholder="Password" required>
+        <span class="form-icon">
+            
+        </span>
+    </div>
+
+    <div class="options-row">
+        <div class="checkbox-container">
+            <input type="checkbox" id="remember-me">
+            <label for="remember-me">Ingat Saya</label>
+        </div>
+        <a href="#SignUp.html" class="forgot-password">Lupa Password</a>
+    </div>
+
+    <button type="submit" class="login-btn">Login</button>
+
+    <a href="#SignUp.html" class="signup-link">Buat akun baru</a>
+</form>
             </div>
         </div>
     </div>
 <script>
+// Navigasi menu header
+document.querySelectorAll('.nav-menu li a').forEach(function(link) {
+    const text = link.textContent.trim().toLowerCase();
+    link.addEventListener('click', function(e) {
+        if (text === 'tentang') {
+            e.preventDefault();
+            window.location.href = 'AboutUs/aboutus.html';
+        } else if (text === 'riwayat') {
+            e.preventDefault();
+            window.location.href = 'Riwayat Donasi/riwayatdonasi.html';
+        } else if (text === 'donasi') {
+            e.preventDefault();
+            window.location.href = 'KategoriDonasi.html';
+        } else if (text === 'aktivitas') {
+            e.preventDefault();
+            window.location.href = 'aktivitas.html';
+        } else if (text === 'mulai berbagi') {
+            e.preventDefault();
+            window.location.href = 'login.html';
+        }
+    });
+});
+
+// Action tombol "Login"
+document.querySelector('.login-form-container form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Login berhasil!');
+    window.location.href = 'landing2.html';
+});
+
+// "Lupa Password" ke SignUp.html
+document.querySelector('.forgot-password').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.location.href = 'SignUp.html';
+});
+
+// "Buat akun baru" ke SignUp.html
+document.querySelector('.signup-link').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.location.href = 'SignUp.html';
+});
+
 // Navigasi "Mulai Berbagi"
 document.querySelector('.login-register').addEventListener('click', function(e) {
     e.preventDefault();
@@ -99,7 +144,7 @@ document.querySelector('.login-form-container form').addEventListener('submit', 
     e.preventDefault();
     // Contoh: redirect ke halaman utama setelah login
     alert('Login berhasil!');
-    window.location.href = 'index.html';
+    window.location.href = 'landing2.html';
 });
 
 // "Lupa Password" ke SignUp.html
