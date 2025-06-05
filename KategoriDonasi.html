@@ -7,15 +7,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styleKategori.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="TombolDonasi.css">
 </head>
 <body>
   <!-- Header -->
     <header>
         <div class="container header-container">
             <div class="logo">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 4H3C1.89543 4 1 4.89543 1 6V18C1 19.1046 1.89543 20 3 20H21C22.1046 20 23 19.1046 23 18V6C23 4.89543 22.1046 4 21 4Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                <img src="assets/logo.jpg" alt="Logo" class="logo-img">
                 <span class="logo-text">SumbangYuk</span>
             </div>
             <!-- Navigasi -->
@@ -99,12 +99,59 @@
 
         </div>
 
-        <!-- dinonaftifkan <div class="donate-button">
-             <button>Donasi Sekarang</button>
-        </div> -->
+        <div class="donate-button">
+            <button>Donasi Sekarang</button>
+        </div>
     </main>
+
+ <!-- Kata Motivasi -->
+<div class="footer-quote">
+    <p><em>"Bukan seberapa banyak yang kita berikan, tetapi seberapa besar cinta yang kita tanamkan dalam pemberian itu"</em></p>
+</div>
+    <!-- Footer  -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <!-- Logo & Social Media -->
+        <div class="footer-column">
+            <div class="footer-logo">SumbangYuk</div>
+            <div class="footer-socials">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="footer-column">
+            <h4>Links</h4>
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Donasikan Barang</a></li>
+                <li><a href="#">Riwayat Donasi</a></li>
+                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="#">Aktivitas Terbaru</a></li>
+                <li><a href="#">Hubungi Kami</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-column">
+            <h4>Hubungi Kami</h4>
+            <p>Jl. Peduli No. 10, Jakarta<br>
+            info@sumbangyuk.id<br>
+            0811-9627-9260</p>
+        </div>
+
+        <!-- Hashtags -->
+        <div class="footer-column footer-hashtags">
+            <p>#SatuBarangBisaBerarti</p>
+            <p>#SumbangYuk</p>
+        </div>
+    </div>
+</footer>
     <script>
-    // Navigasi menu header
+
 // Navigasi menu header
 document.querySelectorAll('.nav-menu li a').forEach(function(link) {
     const text = link.textContent.trim().toLowerCase();
@@ -131,8 +178,15 @@ document.querySelectorAll('.nav-menu li a').forEach(function(link) {
 // Action tombol "Donasi Sekarang"
 document.querySelector('.donate-button button').addEventListener('click', function(e) {
     e.preventDefault();
-    window.location.href = '../formdonasi/formdonasi.html';
+    window.location.href = 'login.html';
 });
+
+// Action tombol "Donasi Sekarang"
+document.querySelector('.donate-button button').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.location.href = 'login.html';
+});
+
 </script>
 </body>
 </html>

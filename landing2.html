@@ -13,9 +13,7 @@
     <header>
     <div class="container header-container">
         <div class="logo">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21 4H3C1.89543 4 1 4.89543 1 6V18C1 19.1046 1.89543 20 3 20H21C22.1046 20 23 19.1046 23 18V6C23 4.89543 22.1046 4 21 4Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <img src="assets/logo-removebg-preview.png" alt="Logo" class="logo-img">
             <span class="logo-text">SumbangYuk</span>
         </div>
         <ul class="nav-menu">
@@ -76,7 +74,13 @@
      </div>
 
     <div class="aktivitas-quote">
-    <p><em>"Rangkaian aksi nyata untuk bantu sesama yang membutuhkan"</em></p>
+    <p>
+        <em>
+            "Rangkaian aksi nyata untuk bantu sesama yang<br>
+             membutuhkan"
+        </em>
+    </p>
+    <br>
     <a href="#" class="btn-quote">Lihat semua</a>
 </div>
     <!-- Activities Section -->
@@ -90,8 +94,6 @@
             </div>
             <div class="activity-content">
                 <h3 class="activity-title">Penyaluran ke Komunitas Sahabat Ibu – Tangerang</h3>
-                <p class="activity-description">
-                    Pada Januari 2025, kami menyalurkan pakaian layak pakai dan perlengkapan rumah tangga ke Komunitas Sahabat Ibu. Bantuan ini diberikan untuk mendukung para ibu yang membutuhkan di wilayah Tangerang.
             </div>
         </div>
 
@@ -122,8 +124,6 @@
         </div>
         <div class="activity-content">
             <h3 class="activity-title">Donasi Seragam Sekolah - SMPN 6 Bekasi</h3>
-            <p class="activity-description">
-                    Pada Januari 2025, kami menyalurkan pakaian layak pakai dan perlengkapan rumah tangga ke Komunitas Sahabat Ibu. Bantuan ini diberikan untuk mendukung para ibu yang membutuhkan di wilayah Tangerang.
         </div>
     </div>
 
@@ -276,7 +276,13 @@ if (btnRiwayat) {
     });
 }
 
-
+// Action klik logo ke landing2.html
+const logo = document.querySelector('.logo');
+if (logo) {
+    logo.addEventListener('click', function() {
+        window.location.href = 'landing2.html';
+    });
+}
     
   window.addEventListener('scroll', () => {
     const header = document.querySelector('header');

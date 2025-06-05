@@ -1,0 +1,14 @@
+        .donate-button {
+            text-align: right;
+            margin-top: 30px;
+        }
+
+        .donate-button button {
+            background-color: #0e3e64;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 14px;
+            cursor: pointer;
+        }

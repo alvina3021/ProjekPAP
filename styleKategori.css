@@ -114,13 +114,15 @@ header {
             margin-top: 40px;
             overflow: hidden;
             padding: 0 20px;
+            gap: 24px;
+            margin-bottom: 40px;
         }
         
         .donation-categories {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, auto);
-            gap: 20px;
+            gap: 24px;
             overflow-x: auto;
             padding: 10px 0;
             scroll-behavior: smooth;
@@ -134,8 +136,8 @@ header {
         }
         
         .category-card {
-           
-            
+            min-width: 0;      /* Ubah dari 550px ke 0 agar grid gap bekerja */
+            margin: 0 auto;    /* Tengah dan beri jarak dari pinggir grid */
             overflow: hidden;
             display: flex;
             height: 200px;
@@ -178,43 +180,108 @@ header {
             background-color: linear-gradient(to bottom, #FFFFFF, #DDE6ED);
         }
 
-         @media (max-width: 768px) {
-        nav {
-            display: none;
-        }
-
-        header {
-            flex-wrap: wrap;
-            justify-content: space-between;
-            
-        }
-
-        .logo {
-            font-size: 20px;
-        }
-
-        .donation-intro h1 {
-            font-size: 20px;
-        }
-
-        .category-card {
-            width: 280px;
-            height: 180px;
-        }
-
-        .category-info h3 {
-            font-size: 14px;
-        }
-
-        .category-info p {
-            font-size: 12px;
+        .donate-button {
+            text-align: right;
+            margin-top: 30px;
         }
 
         .donate-button button {
-            padding: 10px 20px;
-            font-size: 13px;
+            background-color: #0e3e64;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 14px;
+            cursor: pointer;
         }
-    }
+
+/* Kata Motivasi */
+.footer-quote {
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 27px;
+    font-style: italic;
+    color: #000000;
+    font-weight: 700;
+    margin-top: 100px;
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: #123458;
+    color: #fff;
+    padding: 3rem 2rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1 1 200px;
+    min-width: 180px;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.footer-socials a {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-right: 0.75rem;
+    transition: color 0.3s ease;
+    width: 63px;
+    height: 63px;
+    margin-top: 1854px;
+    
+}
+
+.footer-socials a:hover {
+    color: #ccc;
+}
+
+.footer-column h4 {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.3rem; 
+    border-bottom: 4px solid #ffffff; 
+    display: inline-block; 
+    width: 219.5px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-hashtags p {
+    font-size: 0.9rem;
+    margin: 0.4rem 0;
+    font-weight: 700;
+}
 
 @media screen and (max-width: 1200px) {
     .header-container {

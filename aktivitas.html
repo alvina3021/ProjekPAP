@@ -13,9 +13,7 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 4H3C1.89543 4 1 4.89543 1 6V18C1 19.1046 1.89543 20 3 20H21C22.1046 20 23 19.1046 23 18V6C23 4.89543 22.1046 4 21 4Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                <img src="assets/logo.jpg" alt="Logo" class="logo-img">
                 <span class="logo-text">SumbangYuk</span>
             </div>
             <ul class="nav-menu">
@@ -68,6 +66,9 @@
         </div>
         <div class="activity-content">
             <h3 class="activity-title">Pemberian Tas Sekolah – SDN 2 Pahlawan</h3>
+            <p class="activity-description">
+                Kami menyalurkan tas sekolah layak pakai untuk mendukung semangat belajar siswa-siswi SDN 2 Pahlawan. Kegiatan ini dilaksanakan bersama relawan lokal yang turut membantu proses distribusi. 
+            </p>
         </div>
     </div>
 
@@ -78,6 +79,9 @@
         </div>
         <div class="activity-content">
             <h3 class="activity-title">Donasi Buku Pelajaran – SDN 1 Cipayung</h3>
+            <p class="activity-description">
+                Ratusan buku pelajaran dari para donatur kami salurkan ke SDN 1 Cipayung. Proses penyaluran dilakukan langsung ke perpustakaan sekolah.
+            </p>
         </div>
     </div>
 
@@ -89,7 +93,7 @@
         <div class="activity-content">
             <h3 class="activity-title">Donasi Seragam Sekolah - SMPN 6 Bekasi</h3>
             <p class="activity-description">
-                    Pada Januari 2025, kami menyalurkan pakaian layak pakai dan perlengkapan rumah tangga ke Komunitas Sahabat Ibu. Bantuan ini diberikan untuk mendukung para ibu yang membutuhkan di wilayah Tangerang.
+                    Donasi seragam sekolah ini ditujukan untuk siswa-siswi kurang mampu di SMPN 6 Bekasi. Program ini membantu meringankan beban orang tua sekaligus mendukung keberlangsungan pendidikan anak-anak.
         </div>
     </div>
 
@@ -100,6 +104,9 @@
         </div>
         <div class="activity-content">
             <h3 class="activity-title">Donasi Alat Tulis - Panti Asuhan Kalijaga</h3>
+            <p class="activity-description">
+                Kami menyalurkan berbagai alat tulis seperti pensil, pulpen, penggaris, dan buku tulis untuk anak-anak di Panti Asuhan Kalijaga. Donasi ini diharapkan dapat menunjang kegiatan belajar mereka.
+            </p>
         </div>
     </div>
     <!-- Activity Card 6 -->
@@ -109,9 +116,12 @@
         </div>
         <div class="activity-content">
             <h3 class="activity-title">Donasi Mainan Anak - Posyandu Ceria</h3>
+            <p class="activity-description">
+                Puluhan mainan anak dikumpulkan dan disalurkan ke Posyandu Ceria untuk mendukung tumbuh kembang balita di lingkungan tersebut. Mainan-mainan ini dibagikan saat kegiatan posyandu berlangsung.
+            </p>
         </div>
     </div>
-    </div>
+</div>
 </div>
 
     <!-- Ajakan Donasi Section -->
@@ -173,7 +183,7 @@
 </footer>
 
 <script>
-    // Navigasi menu header
+  // Navigasi header
 document.querySelectorAll('.nav-menu li a').forEach(function(link) {
     const text = link.textContent.trim().toLowerCase();
     link.addEventListener('click', function(e) {
@@ -183,18 +193,23 @@ document.querySelectorAll('.nav-menu li a').forEach(function(link) {
         } else if (text === 'riwayat') {
             e.preventDefault();
             window.location.href = 'Riwayat Donasi/riwayatdonasi.html';
+        } else if (text === 'aktivitas') {
+            e.preventDefault();
+            window.location.href = 'Aktivitas.html';
         } else if (text === 'donasi') {
             e.preventDefault();
             window.location.href = 'KategoriDonasi.html';
-        } else if (text === 'aktivitas') {
-            e.preventDefault();
-            window.location.href = 'aktivitas.html';
-        } else if (text === 'mulai berbagi') {
-            e.preventDefault();
-            window.location.href = 'login.html';
         }
     });
 });
+
+// Action klik logo ke index.html
+const logo = document.querySelector('.logo');
+if (logo) {
+    logo.addEventListener('click', function() {
+        window.location.href = 'index.html';
+    });
+}
 
 // Navigasi footer
 document.querySelectorAll('.footer-column ul li a').forEach(function(link) {

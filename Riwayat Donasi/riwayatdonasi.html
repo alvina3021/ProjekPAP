@@ -7,14 +7,14 @@
    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="riwayatdonasi.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="List.css">
 </head>
 <body>
    <header>
         <div class="container header-container">
             <div class="logo">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 4H3C1.89543 4 1 4.89543 1 6V18C1 19.1046 1.89543 20 3 20H21C22.1046 20 23 19.1046 23 18V6C23 4.89543 22.1046 4 21 4Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                <img src="../assets/logo.jpg" alt="Logo" class="logo-img">
                 <span class="logo-text">SumbangYuk</span>
             </div>
              <ul class="nav-menu">
@@ -29,7 +29,7 @@
 
     <main>
         <div class="history-intro">
-            <h1>Riwayat Donasi Saya</h1>
+            <h1>Riwayat Donasi</h1>
             <p>Lihat semua donasi yang telah anda berikan untuk kebaikan bersama</p>
         </div>
 
@@ -62,19 +62,6 @@
     </div>
   </div>
 </div>
-
-        <div class="stats-section">
-            <div class="stat-card">
-                <p>Total Donasi : 12 Barang</p>
-            </div>
-            <div class="stat-card">
-                <p>Donasi Terakhir : 14 Mei 2025</p>
-            </div>
-            <div class="stat-card">
-                <p>Kategori Terbanyak : Pakaian (5)</p>
-            </div>
-        </div>
-
         <div class="donation-list-header">
             <h2>Daftar Donasi</h2>
         </div>
@@ -88,17 +75,79 @@
                     <div class="donation-details">
                         <h3>Pakaian</h3>
                         <p>Jumlah : 5</p>
-                        <p>Didonasikan pada : 14 Mei 2025</p>
+                        <p>Alvina - 14 Mei 2025</p>
                     </div>
                 </div>
                 <div class="donation-actions">
                     <!--<button class="donate-again-btn">Donasi Lagi</button> -->
                     <div class="status-badge">Disalurkan</div>
-                    
+                </div>
+            </div>
+            <div class="donation-card">
+                <div class="donation-info">
+                    <div class="donation-img">
+                        <img src="../Kategori donasi/alatulis.jpg" alt="Tumpukan baju">
+                    </div>
+                <div class="donation-details">
+                        <h3>Alat Tulis</h3>
+                        <p>Jumlah : 100</p>
+                        <p>Risma Istri Jake - 05 Juni 2025</p>
+                    </div>
+                </div>
+                <d class="donation-actions">
+                    <!--<button class="donate-again-btn">Donasi Lagi</button>-->
+                    <div class="status-badge" style="background:#edd76a; color:#ffffff;">Penjemputan</div>
                 </div>
             </div>
         </div>
     </main>
+    <!-- Kata Motivasi -->
+<div class="footer-quote">
+    <p><em>"Bukan seberapa banyak yang kita berikan, tetapi seberapa besar cinta yang kita tanamkan dalam pemberian itu"</em></p>
+</div>
+
+<!-- Footer  -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <!-- Logo & Social Media -->
+        <div class="footer-column">
+            <div class="footer-logo">SumbangYuk</div>
+            <div class="footer-socials">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="footer-column">
+            <h4>Links</h4>
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Donasikan Barang</a></li>
+                <li><a href="#">Riwayat Donasi</a></li>
+                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="#">Aktivitas Terbaru</a></li>
+                <li><a href="#">Hubungi Kami</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-column">
+            <h4>Hubungi Kami</h4>
+            <p>Jl. Peduli No. 10, Jakarta<br>
+            info@sumbangyuk.id<br>
+            0811-9627-9260</p>
+        </div>
+
+        <!-- Hashtags -->
+        <div class="footer-column footer-hashtags">
+            <p>#SatuBarangBisaBerarti</p>
+            <p>#SumbangYuk</p>
+        </div>
+    </div>
+</footer>
 <script>
 // Navigasi menu header
 document.querySelectorAll('.nav-menu li a').forEach(function(link) {

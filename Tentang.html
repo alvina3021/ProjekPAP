@@ -13,9 +13,10 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!--<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M21 4H3C1.89543 4 1 4.89543 1 6V18C1 19.1046 1.89543 20 3 20H21C22.1046 20 23 19.1046 23 18V6C23 4.89543 22.1046 4 21 4Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                </svg> -->
+                <img src="assets/logo.jpg" alt="Logo" class="logo-img">
                 <span class="logo-text">SumbangYuk</span>
             </div>
             <ul class="nav-menu">
@@ -72,14 +73,7 @@
             <div class="mission-box">
                 <div class="mission-header">
                     <div class="mission-icon">
-                    <!-- Icon untuk Misi - Gift/Box icon -->
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 12V22H4V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M22 7H2V12H22V7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M12 22V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M12 7H7.5C6.83696 7 6.20107 6.73661 5.73223 6.26777C5.26339 5.79893 5 5.16304 5 4.5C5 3.83696 5.26339 3.20107 5.73223 2.73223C6.20107 2.26339 6.83696 2 7.5 2C9 2 10 3 10 4V7H12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M12 7H16.5C17.163 7 17.7989 6.73661 18.2678 6.26777C18.7366 5.79893 19 5.16304 19 4.5C19 3.83696 18.7366 3.20107 18.2678 2.73223C17.7989 2.26339 17.163 2 16.5 2C15 2 14 3 14 4V7H12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                    <img src="assets/visi.jpg" alt="visi" class="logo-img">
                     </div>
                     <h3 class="mission-title">Misi</h3>
                 </div>
@@ -90,11 +84,7 @@
             <div class="mission-box">
                 <div class="mission-header">
                     <div class="mission-icon">
-                    <!-- Icon untuk Visi - Eye icon -->
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                    <img src="assets/misi.jpg" alt="misi" class="logo-img">
                 </div>
                 <h3 class="mission-title">Visi</h3>
             </div>
@@ -105,12 +95,7 @@
         <div class="mission-box">
             <div class="mission-header">
                 <div class="mission-icon">
-                    <!-- Icon untuk Tujuan - Target icon -->
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                    <img src="assets/tujuan.jpg" alt="tujuan" class="logo-img">
                 </div>
                 <h3 class="mission-title">Tujuan</h3>
             </div>
@@ -233,25 +218,33 @@
     </footer>
 
     <script>
-        // Navigasi header
-        document.querySelectorAll('.nav-menu li a').forEach(function(link) {
-            const text = link.textContent.trim().toLowerCase();
-            link.addEventListener('click', function(e) {
-                if (text === 'tentang') {
-                    e.preventDefault();
-                    window.location.href = 'Tentang.html';
-                } else if (text === 'riwayat') {
-                    e.preventDefault();
-                    window.location.href = 'Riwayat.html';
-                } else if (text === 'aktivitas') {
-                    e.preventDefault();
-                    window.location.href = 'Aktivitas2.html';
-                } else if (text === 'donasi') {
-                    e.preventDefault();
-                    window.location.href = 'Kategori donasi/kategoridonasi.html';
-                }
-            });
-        });
+        // Navigasi menu header
+document.querySelectorAll('.nav-menu li a').forEach(function(link) {
+    const text = link.textContent.trim().toLowerCase();
+    link.addEventListener('click', function(e) {
+        if (text === 'tentang') {
+            e.preventDefault();
+            window.location.href = 'Tentang.html';
+        } else if (text === 'riwayat') {
+            e.preventDefault();
+            window.location.href = 'Riwayat.html';
+        } else if (text === 'donasi') {
+            e.preventDefault();
+            window.location.href = 'Kategori Donasi/kategoridonasi.html';
+        } else if (text === 'aktivitas') {
+            e.preventDefault();
+            window.location.href = 'Aktivitas2.html';
+        }
+    });
+});
+
+// Action klik logo ke landing2.html
+const logo = document.querySelector('.logo');
+if (logo) {
+    logo.addEventListener('click', function() {
+        window.location.href = 'landing2.html';
+    });
+}
 
         // Navigasi footer
     document.querySelectorAll('.footer-column ul li a').forEach(function(link) {
