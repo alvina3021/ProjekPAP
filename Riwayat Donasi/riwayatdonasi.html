@@ -172,6 +172,14 @@ document.querySelectorAll('.nav-menu li a').forEach(function(link) {
     });
 });
 
+// Action klik logo ke index.html
+const logo = document.querySelector('.logo');
+if (logo) {
+    logo.addEventListener('click', function() {
+        window.location.href = '../index.html';
+    });
+}
+
 // Action tombol "Donasi Lagi"
 document.querySelectorAll('.donate-again-btn').forEach(function(btn) {
     btn.addEventListener('click', function(e) {

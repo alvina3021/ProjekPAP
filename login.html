@@ -79,7 +79,6 @@
         </div>
     </div>
 <script>
-// Navigasi menu header
 document.querySelectorAll('.nav-menu li a').forEach(function(link) {
     const text = link.textContent.trim().toLowerCase();
     link.addEventListener('click', function(e) {
@@ -89,18 +88,28 @@ document.querySelectorAll('.nav-menu li a').forEach(function(link) {
         } else if (text === 'riwayat') {
             e.preventDefault();
             window.location.href = 'Riwayat Donasi/riwayatdonasi.html';
+        } else if (text === 'aktivitas') {
+            e.preventDefault();
+            window.location.href = 'Aktivitas.html';
         } else if (text === 'donasi') {
             e.preventDefault();
             window.location.href = 'KategoriDonasi.html';
-        } else if (text === 'aktivitas') {
-            e.preventDefault();
-            window.location.href = 'aktivitas.html';
+        
         } else if (text === 'mulai berbagi') {
             e.preventDefault();
             window.location.href = 'login.html';
         }
     });
 });
+
+// Action klik logo ke index.html
+const logo = document.querySelector('.logo');
+if (logo) {
+    logo.addEventListener('click', function() {
+        window.location.href = 'index.html';
+    });
+}
+
 
 // Action tombol "Login"
 document.querySelector('.login-form-container form').addEventListener('submit', function(e) {
